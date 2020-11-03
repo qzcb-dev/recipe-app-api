@@ -1,8 +1,5 @@
 {
     "python.pythonPath": "../../venv_drf/bin/python",
-    "html.suggest.html5": true,
-    "emmet.triggerExpansionOnTab": true,
-    "emmet.showSuggestionsAsSnippets": true,
     "files.associations": {
         "**/*.html": "html",
         "**/templates/**/*.html": "django-html",

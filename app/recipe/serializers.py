@@ -36,7 +36,7 @@ class RecipeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Recipe
         fields = ('id', 'title', 'ingredient', 'tags', 'time_minutes', 'price',
-                  'link')
+                  'link', 'image')
         read_only = ('id',)
 
 
@@ -52,3 +52,12 @@ class RecipeDetailSerializer(RecipeSerializer):
         many=True,
         read_only=True
     )
+
+
+class RecipeImageSerializer(serializers.ModelSerializer):
+    """Serializer for upload images to recipes"""
+
+    class Meta:
+        model = Recipe
+        fields = ('id', 'image')
+        read_only_fields = ('id',)
